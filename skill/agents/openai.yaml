@@ -1,0 +1,5 @@
+interface:
+  display_name: "短视频复盘室"
+  short_description: "从抖音、小红书后台截图逐项解读作品数据，归档单条复盘与每周运营报告"
+  brand_color: "#D74589"
+  default_prompt: "用 $video-review-studio 复盘这组后台截图，保存报告并给我下一条的测试建议。"

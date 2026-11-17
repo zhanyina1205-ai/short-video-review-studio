@@ -1,0 +1,1 @@
+{"name":"short-video-review-studio","private":true,"version":"1.0.0","scripts":{"build":"python3 build.py"},"dependencies":{"pyodide":"0.27.7","tesseract.js":"5.1.1","@tesseract.js-data/chi_sim":"1.0.0","@tesseract.js-data/eng":"1.0.0"}}

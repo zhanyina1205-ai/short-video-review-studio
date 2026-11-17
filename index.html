@@ -1,0 +1,24 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>短视频复盘室 · 内容工作台</title><link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script></head>
+<body>
+<aside class="sidebar">
+  <div class="brand"><span class="mark" aria-hidden="true">▥</span><div>短视频复盘室<small>VIDEO REVIEW STUDIO</small></div></div>
+  <nav aria-label="工作区">
+    <button data-page="home" class="active"><i aria-hidden="true">◫</i>内容工作台</button>
+    <button data-page="archive"><i aria-hidden="true">▤</i>作品档案</button>
+    <button data-page="weekly"><i aria-hidden="true">▦</i>运营周报</button>
+  </nav>
+  <div class="local"><span></span>本地工作空间</div>
+</aside>
+<main>
+  <div class="topline"><span>工作空间　/　<strong id="crumb">内容工作台</strong></span><time id="today"></time></div>
+  <header class="head"><div><small class="eyebrow" id="kicker">WORKSPACE OVERVIEW</small><h1 id="heading">内容工作台</h1></div><button id="new" class="primary">＋ 导入后台截图</button></header>
+  <div id="surface" aria-live="polite">正在读取作品档案…</div>
+</main>
+<dialog id="viewer"><div class="dialogbar"><strong id="viewtitle">复盘报告</strong><button data-close="viewer">关闭 ✕</button></div><iframe title="复盘报告内容" id="frame"></iframe></dialog>
+<dialog id="editor"><div class="dialogbar"><div><small class="eyebrow">REVIEW ENTRY</small><h2>导入作品数据</h2></div><button data-close="editor">关闭 ✕</button></div>
+<form id="entry"><section class="entrysection"><h3>后台截图</h3><label class="drop" id="drop"><b>＋ 选择或拖入后台截图</b><span>PNG、JPEG · 可多选 · 在本机识别</span><input id="files" type="file" accept="image/png,image/jpeg" multiple></label><div id="previews"></div><div id="ocrstatus" role="status"></div><details id="raw"><summary>查看识别原文</summary><pre id="rawtext"></pre></details></section>
+<section class="entrysection"><h3>作品信息</h3><label>归档位置<select id="match"><option value="">新作品</option></select></label>
+<div class="pair"><label>平台<select id="platform"><option>抖音</option><option>小红书</option></select></label><label>复盘目标<select id="goal"><option>观看</option><option>涨粉</option><option>互动</option><option>咨询</option></select></label></div>
+<label>作品标题<input id="title" required maxlength="200"></label><div class="pair"><label>发布时间（北京时间）<input type="datetime-local" id="published"></label><label>观察时间（北京时间）<input type="datetime-local" id="observed" required></label></div></section>
+<section class="entrysection"><h3>核对数据</h3><p class="muted">保留「万」「秒」「%」等单位。可修改识别值，也可补录流量来源、观众画像等字段。</p><div id="metrics"></div><datalist id="names"></datalist><button type="button" id="add">＋ 添加指标</button>
+<label>补充观察<textarea id="context" rows="2" placeholder="例如：第 4 秒切换第二套造型"></textarea></label></section><div id="err" role="alert"></div><footer><button id="save" class="primary">生成并保存复盘</button></footer></form></dialog></body></html>
